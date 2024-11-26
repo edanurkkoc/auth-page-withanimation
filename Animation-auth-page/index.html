@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Auth Page With Animation</title>
+</head>
+<body>
+    <div class="container" id="container">
+        <div class="form-container login-container">
+            <form action="#">
+                <h1>Hesap Olustur</h1>
+                <div class="social-container">
+                    <a href="#" class="social"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#" class="social"><i class="fa-brands fa-google-plus-g"></i></a>
+                    <a href="#" class="social"><i class="fa-brands fa-apple"></i></a>
+                    <a href="#" class="social"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+                <span>ya da E-posta adresinizi kullanın</span>
+                <input type="text" placeholder="Adınız">
+                <input type="email" placeholder="E-posta adresiniz">
+                <input type="password" placeholder="Şifreniz">
+                <button>Üye Ol</button>
+            </form>
+        </div>
+        <div class="form-container register-container">
+            <form action="#">
+                <h1>Giriş Yap</h1>
+                <div class="social-container">
+                    <a href="#" class="social"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#" class="social"><i class="fa-brands fa-google-plus-g"></i></a>
+                    <a href="#" class="social"><i class="fa-brands fa-apple"></i></a>
+                    <a href="#" class="social"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+                <span>ya da hesap bilgilerinizi kullanın</span>
+                <input type="email" placeholder="E-posta adresiniz">
+                <input type="password" placeholder="Şifreniz">
+                <button>Giriş Yap</button>
+            </form>
+        </div>
+        <div class="kaplama-container">
+            <div class="kaplama">
+                <div class="kaplama-panel kaplama-sol">
+                    <h1>Zaten bir hesaba sahibim</h1>
+                    <p>Şimdi giriş yap ve servislerimizi kullanmaya başla!</p>
+                    <button class="gosterim" id="girisyap">Giriş Yap</button>
+                </div>
+                <div class="kaplama-panel kaplama-sag">
+                    <h1>Heniz bir hesaba sahip değil misiniz?</h1>
+                    <p>Bilgilerini gir ve bize katıl</p>
+                    <a href="#">Şifremi Unuttum</a>
+                    <button class="gosterim" id="uyeol">Üye Ol</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>

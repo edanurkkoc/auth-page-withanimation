@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+body{
+    background-color:#F6F5F7;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-direction:column;
+    width:100vw;
+    height:100vh;
+    margin:0 0 45px;
+    overflow:hidden;
+}
+h1{
+    font-weight:600;
+    margin:0;
+
+}
+p{
+    font-size:15px;
+    font-weight:300;
+    line-height:25px;
+    letter-spacing:0.7px;
+    margin:25px 0 45px;
+}
+span{
+    font-size:13px;
+}
+a{
+    color:#2b2a2a;
+    font-size:15px;
+    text-decoration:none;
+    margin:20px 0;
+}
+button{
+    border-radius:15px;
+    border:1px solid #099ff7;
+    background-color:#099ff7;
+    color:#FFF;
+    font-size:12px;
+    font-weight:600;
+    padding:14px 20px;
+    letter-spacing:1.5px;
+    text-transform:uppercase;
+    transition:transform 90ms ease-in;
+    cursor:pointer;
+
+}
+button:aktif{
+    transform:scale(0.90);
+}
+button:focus{
+    outline:none;
+}
+button.gosterim{
+    background-color:transparent;
+    border-color:#FFF;
+
+}
+
+form{
+    background-color:#FFF;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-direction:column;
+    padding:0 45px;
+    height:100%;
+    text-align:center;
+}
+input{
+    background-color:#EEE;
+    border:none;
+    padding:14px 20px;
+    margin:10px 0;
+    width:100%;
+    outline:none;
+    color:#000;
+}
+.container{
+    background-color:#FFF;
+    border-radius:12px;
+    box-shadow:0 15px 30px rgba(0,0,0,0.3) 0 12px 20px rgba(0,0,0,0.25);
+    position:relative;
+    overflow:hidden;
+    width:760px;
+    max-width:100%;
+    min-height:500px;
+}
+.form-container{
+    position:absolute;
+    top:0;
+    height100%;
+    transition:all 0.5s ease-in-out;
+}
+.register-container{
+    left:0;
+    width:50%;
+    z-index:2;
+}
+.container.sag-panel-aktif .register-container{
+    transform:translateX(100%);
+}
+.login-container{
+    left:0;
+    width:50%;
+    opacity:0;
+    z-index:1;
+}
+.container.sag-panel-aktif .login-container{
+    transform:translateX(100%);
+    opacity:1;
+    z-index:5;
+    animation:goster 0.7s;
+}
+@keyframes goster{
+    0%,
+    49.99%{
+        opacity:0;
+        z-index:1;
+    }
+    50%,100%{
+        opacity:1;
+        z-index:5;
+    }
+}
+.kaplama-container{
+    position:absolute;
+    top:0;
+    left:50%;
+    width:50%;
+    height:100%;
+    overflow:hidden;
+    transition:transform 0.6s ease-in-out;
+    z-index:100;
+}
+.container.sag-panel-aktif .kaplama-container{
+    transform:translateX(-100%);
+}
+.kaplama{
+    background:#099ff7;
+    background:-webkit-linear-gradient(to right,#099ff7,#1898e2);
+    background:linear-gradient(to right,#099ff7,#1898e2);
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-position:0 0;
+    color:#FFF;
+    position:relative;
+    left:-100%;
+    width:200%;
+    height:100%;
+    transform:translateX(0);
+    transition:transform 0.6s ease-in-out;
+}
+.container.sag-panel-aktif .kaplama{
+    transform:translateX(50%);
+}
+.kaplama-panel{
+    position:absolute;
+   display:flex;
+   align-items:center;
+   justify-content:center;
+   flex-direction:column;
+   padding:0 40px;
+   text-align:center;
+   height:100%;
+   width:50%;
+   transform:translateX(0);
+   transition:transform 0.7s ease-in-out;
+}
+.kaplama-sol{
+    transform:translateX(-10%);
+}
+.kaplama-sag{
+    right:0;
+    transform:translateX(0);
+}
+.comtainer.container.sag-panel-aktif .kaplama-sol{
+    transform:translateX(0);
+}
+.container.container.sag-panel-aktif .kaplama-sag{
+    transform:translateX(20%);
+}
+.social-container{
+    margin:20px 0;
+}
+.social{
+    border:1px solid #DDD;
+    border-radius:50%;
+    display:inline-flex;
+    justify-content:center;
+    align-items:center;
+    margin:0 7px;
+    width:35px;
+    height:35px;
+    cursor:pointer;
+}
+.social-hover{
+    color:#FFF;
+    background:#000;
+    transition:all 0.3s ease-in;
+}
